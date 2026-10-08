@@ -605,7 +605,9 @@ body {
   display: block;
   object-fit: cover;
   object-position: center top;
+  transform: scale(1.55);
 }
+
 
 .mentor-card h3 {
   color: #10233f;
@@ -1791,5 +1793,307 @@ body {
 
   .hero-card-number {
     font-size: 42px;
+  }
+}
+
+
+
+
+/* Footer Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.footer-logo img {
+  width: 220px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Footer Disclaimer Box */
+.footer-disclaimer-box {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 40px;
+  padding: 25px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  text-align: left;
+}
+
+.footer-disclaimer-box h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer-disclaimer-box p {
+  margin: 0 0 10px;
+  color: #a9bad0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-disclaimer-box p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+@media (max-width: 700px) {
+  .footer {
+    padding: 55px 20px 25px;
+  }
+
+  .footer-logo img {
+    width: 180px;
+  }
+
+  .footer-program {
+    font-size: 15px;
+  }
+
+  .footer-disclaimer-box {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .footer-disclaimer-box h3 {
+    font-size: 16px;
+  }
+
+  .footer-disclaimer-box p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .footer-links {
+    gap: 12px 20px;
+    margin-top: 28px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-bottom p:last-child {
+    text-align: center;
+  }
+}
+
+
+/* Compact Footer */
+.footer {
+  padding: 35px 20px 20px;
+}
+
+.footer-logo img {
+  width: 180px;
+}
+
+.footer-program {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.footer-disclaimer {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer-disclaimer-box {
+  margin-top: 22px;
+  padding: 18px 22px;
+}
+
+.footer-disclaimer-box h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.footer-disclaimer-box p {
+  margin-bottom: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer-divider {
+  margin: 22px auto 15px;
+}
+
+.footer-bottom {
+  font-size: 11px;
+  gap: 10px;
+}
+
+
+/* ================================
+   PROFESSIONAL COMPACT FOOTER
+================================ */
+
+.footer {
+  background: #07182d;
+  color: #ffffff;
+  padding: 45px 24px 20px;
+}
+
+.footer-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 90px;
+  margin: 0 auto 8px;
+  overflow: hidden;
+}
+
+.footer-logo img {
+  width: 240px;
+  height: 130px;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* Program title */
+.footer-program {
+  margin: 5px 0 8px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Short description */
+.footer-brand > .footer-disclaimer {
+  margin: 0;
+  max-width: 650px;
+  color: #8fa6c2;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Disclaimer */
+.footer-disclaimer-box {
+  max-width: 900px;
+  margin: 28px auto 0;
+  padding: 18px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.025);
+  text-align: left;
+}
+
+.footer-disclaimer-box h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-disclaimer-box p {
+  margin: 0 0 7px;
+  color: #8fa6c2;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.footer-disclaimer-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Divider */
+.footer-divider {
+  max-width: 900px;
+  height: 1px;
+  margin: 22px auto 15px;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* Bottom */
+.footer-bottom {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #7188a3;
+  font-size: 11px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom p:last-child {
+  color: #8199b5;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .footer {
+    padding: 35px 18px 18px;
+  }
+
+  .footer-logo {
+    width: 150px;
+    height: 75px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+    height: 85px;
+  }
+
+  .footer-program {
+    font-size: 15px;
+  }
+
+  .footer-brand > .footer-disclaimer {
+    font-size: 12px;
+  }
+
+  .footer-disclaimer-box {
+    margin-top: 22px;
+    padding: 16px 18px;
+  }
+
+  .footer-disclaimer-box p {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .footer-bottom p:last-child {
+    text-align: center;
   }
 }

@@ -1,13 +1,15 @@
 export default function Footer() {
   return (
     <footer className="footer">
-
       <div className="footer-container">
 
+        {/* Logo */}
         <div className="footer-brand">
-
           <a href="/" className="footer-logo">
-            MEHTA<span>INSIGHTS</span>
+            <img
+              src="/Mehta%20Insight%20logo.png"
+              alt="Mehta Insights"
+            />
           </a>
 
           <p className="footer-program">
@@ -15,37 +17,37 @@ export default function Footer() {
           </p>
 
           <p className="footer-disclaimer">
-            Educational program. No guaranteed returns or investment advice.
+            Mehta Insights provides educational content and structured
+            learning programs related to financial markets and trading.
+          </p>
+        </div>
+
+        {/* Disclaimer */}
+       <div className="footer-disclaimer-box">
+  <h3>Disclaimer</h3>
+
+  <p>
+    Mehta Insights provides educational and informational content only.
+    Nothing on this website or through the program should be considered
+    investment advice or a recommendation to buy or sell any security.
+    Trading and investing involve market risks, and past performance is
+    not indicative of future results. No returns or profits are guaranteed.
+  </p>
+</div>
+        {/* Bottom */}
+        <div className="footer-divider"></div>
+
+        <div className="footer-bottom">
+          <p>
+            © {new Date().getFullYear()} Mehta Insights. All rights reserved.
           </p>
 
-        </div>
-
-        <div className="footer-links">
-
-          <a href="#program">Program</a>
-          <a href="#learning">What You Learn</a>
-          <a href="#why-mehta">Why Mehta</a>
-          <a href="#faq">FAQ</a>
-          <a href="#lead-form">Apply Now</a>
-
+          <p>
+            Educational Program • No Guaranteed Returns
+          </p>
         </div>
 
       </div>
-
-      <div className="footer-divider"></div>
-
-      <div className="footer-bottom">
-
-        <p>
-          © {new Date().getFullYear()} Mehta Insights. All rights reserved.
-        </p>
-
-        <p>
-          SEBI Registered Research Analyst (INH000025577)
-        </p>
-
-      </div>
-
     </footer>
   );
 }
