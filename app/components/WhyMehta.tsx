@@ -29,8 +29,13 @@ export default function WhyMehta() {
           <div className="mentor-card">
 
             <div className="mentor-placeholder">
-              AM
-            </div>
+               <img
+            
+             src="/mehtas%20photo.png.jpeg"
+         alt="Ankit Mehta"
+             />
+
+             </div>
 
             <h3>
               Ankit Mehta

@@ -1,250 +1,171 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 export default function LeadForm() {
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    setSubmitted(true);
-  }
+    window.location.assign("/thank-you");
+  };
 
   return (
     <section className="lead-form-section" id="lead-form">
+      <div className="lead-form-wrapper">
 
-      <div className="section-container">
+        <div className="lead-form-content">
+          <p className="section-eyebrow">
+            APPLY FOR THE PROGRAM
+          </p>
 
-        <div className="lead-form-wrapper">
+          <h2>
+            Ready to Build a More Structured Approach to Trading?
+          </h2>
 
-          <div className="lead-form-content">
+          <p>
+            Share your details and the Mehta Insights team will get
+            in touch with you about the 16-week live-mentored trading
+            program.
+          </p>
 
-            <p className="section-eyebrow">
-              APPLY FOR THE PROGRAM
-            </p>
+          <div className="form-trust">
+            <div>✓ 16 weeks of live mentorship</div>
+            <div>✓ Structured market learning</div>
+            <div>✓ Direct mentor interaction</div>
+            <div>✓ No guaranteed-return promises</div>
+          </div>
+        </div>
 
-            <h2>
-              Ready to Build a More Structured Approach to Trading?
-            </h2>
+        <div className="lead-form-card">
+          <form onSubmit={handleSubmit}>
 
-            <p>
-              Share your details and the Mehta Insights team
-              will get in touch with you about the 16-week
-              live-mentored trading program.
-            </p>
+            <div className="form-field">
+              <label htmlFor="fullName">
+                Full Name
+              </label>
 
-            <div className="form-trust">
-
-              <div>
-                ✓ 16 weeks of live mentorship
-              </div>
-
-              <div>
-                ✓ Structured market learning
-              </div>
-
-              <div>
-                ✓ Direct mentor interaction
-              </div>
-
-              <div>
-                ✓ No guaranteed-return promises
-              </div>
-
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                placeholder="Enter your full name"
+              />
             </div>
 
-          </div>
+            <div className="form-field">
+              <label htmlFor="email">
+                Email Address
+              </label>
 
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Enter your email"
+              />
+            </div>
 
-          <div className="lead-form-card">
+            <div className="form-field">
+              <label htmlFor="phone">
+                Phone Number
+              </label>
 
-            {submitted ? (
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Enter your phone number"
+              />
+            </div>
 
-              <div className="form-success">
+            <div className="form-field">
+              <label htmlFor="experience">
+                Trading Experience
+              </label>
 
-                <div className="success-icon">
-                  ✓
-                </div>
+              <select
+                id="experience"
+                name="experience"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select your experience
+                </option>
 
-                <h3>
-                  Application Received
-                </h3>
+                <option value="beginner">
+                  Beginner
+                </option>
 
-                <p>
-                  Thank you for your interest. The Mehta Insights
-                  team will contact you shortly.
-                </p>
+                <option value="intermediate">
+                  Intermediate
+                </option>
 
-              </div>
+                <option value="advanced">
+                  Advanced
+                </option>
+              </select>
+            </div>
 
-            ) : (
+            <div className="form-field">
+              <label htmlFor="learningMode">
+                Preferred Learning Mode
+              </label>
 
-              <form onSubmit={handleSubmit}>
+              <select
+                id="learningMode"
+                name="learningMode"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select learning mode
+                </option>
 
-                <div className="form-field">
+                <option value="online">
+                  Online
+                </option>
 
-                  <label htmlFor="name">
-                    Full Name
-                  </label>
+                <option value="offline">
+                  Offline
+                </option>
+              </select>
+            </div>
 
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Enter your full name"
-                    required
-                  />
+            <div className="form-field">
+              <label htmlFor="message">
+                Message
+              </label>
 
-                </div>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                placeholder="Tell us briefly about your trading goals"
+              />
+            </div>
 
+            <label className="consent-field">
+              <input
+                type="checkbox"
+                name="consent"
+              />
 
-                <div className="form-field">
+              <span>
+                I agree to be contacted regarding the Mehta Insights program.
+              </span>
+            </label>
 
-                  <label htmlFor="email">
-                    Email Address
-                  </label>
+            <button
+              type="submit"
+              className="form-submit"
+            >
+              Submit Application
+              <ArrowRight size={18} />
+            </button>
 
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-
-                </div>
-
-
-                <div className="form-field">
-
-                  <label htmlFor="phone">
-                    Phone Number
-                  </label>
-
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="Enter your phone number"
-                    required
-                  />
-
-                </div>
-
-
-                <div className="form-field">
-
-                  <label htmlFor="experience">
-                    Trading Experience
-                  </label>
-
-                  <select
-                    id="experience"
-                    name="experience"
-                    required
-                    defaultValue=""
-                  >
-
-                    <option value="" disabled>
-                      Select your experience
-                    </option>
-
-                    <option value="beginner">
-                      Beginner
-                    </option>
-
-                    <option value="intermediate">
-                      Intermediate
-                    </option>
-
-                    <option value="advanced">
-                      Advanced
-                    </option>
-
-                  </select>
-
-                </div>
-
-
-                <div className="form-field">
-
-                  <label htmlFor="learningMode">
-                    Preferred Learning Mode
-                  </label>
-
-                  <select
-                    id="learningMode"
-                    name="learningMode"
-                    required
-                    defaultValue=""
-                  >
-
-                    <option value="" disabled>
-                      Select learning mode
-                    </option>
-
-                    <option value="online">
-                      Online
-                    </option>
-
-                    <option value="offline">
-                      Offline
-                    </option>
-
-                  </select>
-
-                </div>
-
-
-                <div className="form-field">
-
-                  <label htmlFor="message">
-                    Message
-                  </label>
-
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    placeholder="Tell us briefly about your trading goals"
-                  />
-
-                </div>
-
-
-                <label className="consent-field">
-
-                  <input
-                    type="checkbox"
-                    required
-                  />
-
-                  <span>
-                    I agree to be contacted regarding the
-                    Mehta Insights program.
-                  </span>
-
-                </label>
-
-
-                <button
-                  type="submit"
-                  className="form-submit"
-                >
-                  Submit Application
-                </button>
-
-              </form>
-
-            )}
-
-          </div>
-
+          </form>
         </div>
 
       </div>
-
     </section>
   );
 }

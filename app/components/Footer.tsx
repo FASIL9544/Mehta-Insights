@@ -10,42 +10,29 @@ export default function Footer() {
             MEHTA<span>INSIGHTS</span>
           </a>
 
-          <p>
+          <p className="footer-program">
             16-Week Live-Mentored Trading Program
           </p>
 
           <p className="footer-disclaimer">
-            Educational program. No guaranteed returns or
-            investment advice.
+            Educational program. No guaranteed returns or investment advice.
           </p>
 
         </div>
 
         <div className="footer-links">
 
-          <a href="#program">
-            Program
-          </a>
-
-          <a href="#learning">
-            What You Learn
-          </a>
-
-          <a href="#why-mehta">
-            Why Mehta
-          </a>
-
-          <a href="#faq">
-            FAQ
-          </a>
-
-          <a href="#lead-form">
-            Apply Now
-          </a>
+          <a href="#program">Program</a>
+          <a href="#learning">What You Learn</a>
+          <a href="#why-mehta">Why Mehta</a>
+          <a href="#faq">FAQ</a>
+          <a href="#lead-form">Apply Now</a>
 
         </div>
 
       </div>
+
+      <div className="footer-divider"></div>
 
       <div className="footer-bottom">
 
